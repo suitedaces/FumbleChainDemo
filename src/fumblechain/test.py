@@ -636,7 +636,8 @@ class TransactionPoolTest(unittest.TestCase):
 
         leftover_count = min(max_txs_in_block - 1, expected_txs_in_tx_pool)
         self.assertEqual(len(list(bc.new_block(self.tx).get_transactions())), 1 + leftover_count)
-
+        
+    
 
 class ClientAPITest(unittest.TestCase):
     """Tests related to the client REST API."""
